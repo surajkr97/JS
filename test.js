@@ -58,8 +58,8 @@ function loginUserMessage(username = "sam"){
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("hitesh"))
-// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage("Suraj"))
+// console.log(loginUserMessage("Suraj"))
 
 
 function calculateCartPrice(val1, val2, ...num1){
