@@ -102,4 +102,4 @@ console.log(returnSecondValue([200, 400, 500, 1000]));
 
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh')
+} )('suraj')
