@@ -74,7 +74,7 @@ const user = {
 }
 
 function handleObject(anyobject){
-    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+    // console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
 }
 
 // handleObject(user)
@@ -90,16 +90,34 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-console.log(returnSecondValue([200, 400, 500, 1000]));
+// console.log(returnSecondValue([200, 400, 500, 1000]));
 
 // Immediately Invoked Function Expressions (IIFE)
 
 
 (function chai(){
     // named IIFE
-    console.log(`DB CONNECTED`);
+    // console.log(`DB CONNECTED`);
 })();
 
 ( (name) => {
-    console.log(`DB CONNECTED TWO ${name}`);
+    // console.log(`DB CONNECTED TWO ${name}`);
 } )('suraj')
+
+// const addTwo = (num1, num2) => {
+//     return num1 + num2
+// }
+
+// const addTwo = (num1, num2) =>  num1 + num2
+
+// const addTwo = (num1, num2) => ( num1 + num2 )
+
+const addTwo = (num1, num2) => ({username: "suraj"})
+
+
+console.log(addTwo(3, 4))
+
+
+// const myArray = [2, 5, 3, 7, 8]
+
+// myArray.forEach()
