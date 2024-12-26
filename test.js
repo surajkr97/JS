@@ -137,3 +137,12 @@ const addTwo = (num1, num2) => ({username: "suraj"})
 
 //------------------------------------------------------------
 
+//For Each Loop
+
+// const lang = ['java', 'python', 'javascript', 'ruby']
+
+// lang.forEach( (i) => {
+//     console.log(i);
+// })
+
+//------------------------------------------------------------
