@@ -113,11 +113,16 @@ function returnSecondValue(getArray){
 // const addTwo = (num1, num2) => ( num1 + num2 )
 
 const addTwo = (num1, num2) => ({username: "suraj"})
-
-
-console.log(addTwo(3, 4))
+// console.log(addTwo(3, 4))
 
 
 // const myArray = [2, 5, 3, 7, 8]
 
 // myArray.forEach()
+
+const myArray = ['apple', 'banana', 'mango', 'orange']
+
+for(let i = 0; i < myArray.length; i++){
+    console.log(myArray[i]);
+    
+}
