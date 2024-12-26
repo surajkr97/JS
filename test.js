@@ -120,9 +120,20 @@ const addTwo = (num1, num2) => ({username: "suraj"})
 
 // myArray.forEach()
 
-const myArray = ['apple', 'banana', 'mango', 'orange']
+// -----------------------------------------------------------
 
-for(let i = 0; i < myArray.length; i++){
-    console.log(myArray[i]);
+// const myArray = ['apple', 'banana', 'mango', 'orange']
+
+// for(let i = 0; i < myArray.length; i++){
+//    console.log(myArray[i]);
     
-}
+// }
+
+// //for of loop
+
+// for(let fruit of myArray){
+//     console.log(fruit);
+// }
+
+//------------------------------------------------------------
+
