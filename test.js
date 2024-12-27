@@ -164,3 +164,5 @@
 // myCoding.forEach((item)=>{
 //     console.log(item.name + ' and the price is ' + '= ' + item.price);
 // })
+
+//------------------------------------------------------------
