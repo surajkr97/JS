@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>DOM Manipulation</title>
 </head>
+
 <body>
-    <h1>Dom Learning</h1>
+    <!-- <h1>Dom Learning</h1>
     <p id="para">This is a paragraph</p>
     <button id="btn">Click me</button>
     <script src="one.js"></script>
@@ -16,6 +18,27 @@
         <li class="list-item">Three</li>
         <li class="list-item">Four</li>
         <li class="list-item">Five</li>
-    </ul>
+    </ul> -->
 </body>
+
+<script>
+    const div1 = document.createElement('div')
+    // console.log(div1);
+    div1.className = 'div1-class'
+    div1.id = 'div1-id'
+    div1.setAttribute("title", "div1-title")
+    div1.style.color = "Red"
+    div1.style.backgroundColor = "Yellow"
+    div1.style.padding = "25px"
+    div1.style.borderRadius = "25px"
+
+    div1.innerText = "Hello World! \n\n"
+    document.body.appendChild(div1)
+
+    const text = document.createTextNode('Hello Folks!')
+    div1.appendChild(text)
+
+    document.body.appendChild(div1)
+</script>
+
 </html>
