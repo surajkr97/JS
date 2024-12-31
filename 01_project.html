@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <title>First Project</title>
     <style> 
-        body{
+    body {
         background-color: lightblue;
     }
     .dsgn{
         height: 20vh;
         width: 20vb;
         font-size: 3vh;
+        margin: 2vh;
+        color: white;
     }
     </style>
 </head>
 <body>
     <h1>Colour Scheme Switcher</h1>
-    <div>
-        <button id="btn1" class="dsgn">Red</button>
-        <button id="btn2" class="dsgn">Green</button>
-        <button id="btn3" class="dsgn">Blue</button>
-        <button id="btn3" class="dsgn">Yellow</button>
+    <div class="container">
+        <button id="btn1" class="dsgn" style="background-color: red;">Red</button>
+        <button id="btn2" class="dsgn" style="background-color: green;">Green</button>
+        <button id="btn3" class="dsgn" style="background-color: blue;">Blue</button>
+        <button id="btn4" class="dsgn" style="background-color: salmon;">Salmon</button>
     </div>
 </body>
+<script>
+    const bqs = document.querySelectorAll('.dsgn')
+    console.log(bqs);
+    
+    document.addEventListener('click', fn1);
+
+    function fn1 (){
+        document.getElementById("")
+    }
+</script>
 </html>
