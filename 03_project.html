@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: aliceblue;
+            display: flex;
+            margin: 0%;
+            height: 100vh;
+            justify-content: center;
+            /* text-align: center; */
+            align-items: center;
+        }
+
+        .clockStyle {
+            background-color: orange;
+            color: #212121;
+            border-radius: 15%;
+            padding: 10%;
+        }
+        #ct {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Digital Clock</h1>
+        <h4 id="ct">Current Time:-</h4>
+        <div id="clock" class="clockStyle"></div>
+    </div>
+</body>
+<script>
+    
+setInterval(() => {
+    const ClockElement = document.querySelector("#clock")
+    let date = new Date();
+    // console.log(date.toLocaleString())
+    ClockElement.innerHTML = date.toLocaleString();
+}, 1000);
+</script>
+</html>
