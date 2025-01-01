@@ -1,38 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>First Project</title>
-    <style> 
-    body {
-        background-color: lightblue;
-    }
-    .dsgn{
-        height: 20vh;
-        width: 20vb;
-        font-size: 3vh;
-        margin: 2vh;
-        color: white;
-    }
+    <style>
+        body {
+            background-color: hotpink;
+            color: whitesmoke;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .dsgn {
+            height: 20vh;
+            width: 20vh;
+            font-size: 3vh;
+            margin: 2vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Colour Scheme Switcher</h1>
     <div class="container">
-        <button id="btn1" class="dsgn" style="background-color: red;">Red</button>
-        <button id="btn2" class="dsgn" style="background-color: green;">Green</button>
-        <button id="btn3" class="dsgn" style="background-color: blue;">Blue</button>
-        <button id="btn4" class="dsgn" style="background-color: salmon;">Salmon</button>
+        <h1>Colour Scheme Switcher </h1> 
+        <div>
+            <button id="red" class="dsgn" style="background-color: red;">Red</button>
+            <button id="green" class="dsgn" style="background-color: green;">Green</button>
+            <button id="blue" class="dsgn" style="background-color: blue;">Blue</button>
+            <button id="salmon" class="dsgn" style="background-color: salmon;">Salmon</button>
+        </div>
     </div>
 </body>
 <script>
-    const bqs = document.querySelectorAll('.dsgn')
-    console.log(bqs);
-    
-    document.addEventListener('click', fn1);
+    const buttons = document.querySelectorAll('.dsgn')
+    const body = document.querySelector('body');
+    // console.log(buttons);
 
-    function fn1 (){
-        document.getElementById("")
-    }
+    buttons.forEach(function (button) {
+        // console.log(button);
+        button.addEventListener('click', function (e) {
+            console.log(e.target);
+            if (e.target.id === 'red') {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === 'green') {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === 'blue') {
+                body.style.backgroundColor = e.target.id
+            }
+            if (e.target.id === 'salmon') {
+                body.style.backgroundColor = e.target.id
+            }
+        });
+    });
 </script>
+
 </html>
