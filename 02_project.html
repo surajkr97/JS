@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>BMI Calculator :-</h1> -->
+    <form>
+        <h1>BMI Calculator :-</h1>
+        <label>Height in CM: </label><input id="height" type="text">
+        <br><br>
+        <label>Weight in KG: </label><input id="weight" type="text">
+        <br><br>
+        <button id="btn">Calculate</button>
+        <br><br>
+        <div id="result"><i>Your Result</i></div>
+        <div id="weight-guide">
+            <h3>BMI Weight Guide</h3>
+            <p>Under Weight = Less than 18.6</p>
+            <p>Normal Range = 18.6 and 24.9</p>
+            <p>Overweight = Greater than 24.9</p>
+        </div>
+        <h2 id="Message"></h2>
+    </form>
+</body>
+<script>
+    const formv = document.querySelector('form')
+
+    formv.addEventListener('submit', function (e) {
+        e.preventDefault()
+
+        const heightv = parseInt(document.querySelector('#height').value)
+        const weightv = parseInt(document.querySelector('#weight').value)
+        const resultv = document.querySelector('#result')
+
+        if (heightv === '' || heightv <= 0 || isNaN(heightv)) {
+            resultv.innerHTML = `Please enter a valid height ${heightv}`;
+        }
+        else if (weightv === '' || weightv <= 0 || isNaN(weightv)) {
+            resultv.innerHTML = `Please enter a valid weight ${weightv}`
+        }
+        else {
+            const BMI = (weightv / ((heightv / 100) ** 2)).toFixed(2);
+            resultv.innerHTML = `Your BMI is: ${BMI}`
+
+            if (BMI <= 18.6) {
+                const hi = document.getElementById('Message')
+                hi.innerHTML = "Sorry, but you are under weight 😢"
+            }
+            else if (BMI >= 18.6 && BMI <= 24.9){
+                const hi = document.getElementById('Message')
+                hi.innerHTML = "Congratulations, You are Fit by BMI 🎉"
+            }
+            else {
+                const hi = document.getElementById('Message')
+                hi.innerHTML = "Sorry, but you are over weight 😢"
+            }
+        }
+    })
+
+
+
+</script>
+
+</html>
