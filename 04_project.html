@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Number</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+    <h3>Number Guessing Game</h3>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+
+    <h1>Guess The Number</h1>
+    <input type="text">
+    <button>Submit Guess</button>
+    <p>Previous Guess: <span></span></p>
+    <p>Guesses Remaining: <span>10</span>
+    </p>
+</div> -->
+<div id="wrapper">
+    <h1>Number Guessing Game</h1>
+    <p>Try and guess a random number between 1 and 100.</p>
+    <p>You have 10 attempts to guess the right number.</p>
+    <br/>
+    <form class="form">
+      <label2 for="guessField" id="guess">Guess a number:</label>
+      <input type="text" id="guessField" class="guessField" />
+      <input type="submit" id="subt" value="Submit guess" class="guessSubmit" />
+    </form>
+
+    <div class="resultParas">
+      <p>Previous Guesses: <span class="guesses"></span></p>
+      <p>Guesses Remaining: <span class="lastResult">10</span></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>  
+</body>
+<script>
+    const realRandomNumber = (parseInt((Math.random())*100)+1);
+
+    const userInput = document.querySelector("#guessField")
+    const submit = document.querySelector("#subt")
+    const guessSlot = document.querySelector("#guesses")
+    const remaining = document.querySelector("#lastResult")
+    const lowOrHi = document.querySelector(".lowOrHi")
+    const startOver = document.querySelector(".resultParas")
+
+    const p = document.createElement("p")
+
+    function validateGuess(guess){
+      //
+    }
+
+    function checkGuess(guess){
+      //
+    }
+
+    function displayGuess(guess){
+      //
+    }
+
+    function displayMessage(message){
+      //
+    }
+
+    function endGame(){
+      //
+    }
+
+    function newGame(){
+      //
+    }
+
+</script>
+</html>
