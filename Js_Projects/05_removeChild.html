@@ -28,18 +28,25 @@
     </div>
 </body>
 <script>
-    const gog = document.getElementById('images')
-    gog.lastElementChild.addEventListener('click', function(e){
-        e.preventDefault();
-    });
+    const ulItems = document.getElementById('images')
+    console.log(ulItems);
+    
 
-    document.getElementById('images').addEventListener('click', function(e){
+    ulItems.lastElementChild.addEventListener('click', function(e){
+        e.preventDefault();
+        ulItems.lastElementChild.remove();
+    })
+
+    ulItems.addEventListener('click', function(e){
         console.log(e.target.tagName);
+
         if (e.target.tagName === 'IMG') {
-            console.log(e.target.parentNode);
-        let removeIt = e.target.parentNode
-        removeIt.remove()
+            e.target.parentNode.remove();
         }
-    });
+        
+    })
+
+
+
 </script>
 </html>
