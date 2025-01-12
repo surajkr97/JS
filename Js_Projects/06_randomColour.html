@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Random Colour</title>
 </head>
+
+<style>
+    body {
+        margin: 0;
+        background-color: black;
+        color: aliceblue;
+    }
+    .bg{
+    background-color: teal;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    button{
+        padding: 1vh 2vw;
+        border-radius: 5px;
+        margin: 8%;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <body>
-    <h1>Start should change the Background color every second</h1>
-    <button>Start</button>
-    <button>Stop</button>
+    <div class="bg">
+        <h1>Start should change the Background color every second</h1>
+        <div class="btn">
+        <button>Start</button>
+        <button>Stop</button>
+    </div>
+    </div>
 </body>
+<script>
+    
+</script>
 </html>
