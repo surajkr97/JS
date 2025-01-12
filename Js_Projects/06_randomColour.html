@@ -67,9 +67,9 @@
     };
 
     startBtn.addEventListener('click', function () {
-        // document.querySelector('.bg').innerHTML = "";
+        document.querySelector('.bg').innerHTML = "";
         if (!intervalValid) { // Prevent multiple intervals
-            intervalValid = setInterval(startChangingColor, 1000); // Start interval  
+            intervalValid = setInterval(startChangingColor, 200); // Start interval  
         }
     })
 
