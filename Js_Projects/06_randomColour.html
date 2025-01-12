@@ -9,22 +9,24 @@
 <style>
     body {
         margin: 0;
-        background-color: black;
+        background-color: teal;
         color: aliceblue;
     }
-    .bg{
-    background-color: teal;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+
+    .bg {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-    button{
+
+    button {
         padding: 1vh 2vw;
         border-radius: 5px;
         margin: 8%;
     }
+
     .btn {
         display: flex;
         justify-content: center;
@@ -35,12 +37,45 @@
     <div class="bg">
         <h1>Start should change the Background color every second</h1>
         <div class="btn">
-        <button>Start</button>
-        <button>Stop</button>
-    </div>
+            <button class="start">Start</button>
+            <button class="stop">Stop</button>
+        </div>
     </div>
 </body>
 <script>
-    
+    const randomColour = function () {
+        hex = '1234567890ABCDEF'
+        let colour = '#';
+        for (let i = 0; i < 6; i++) {
+            colour += hex[Math.floor(Math.random() * 16)];
+        }
+        return colour;
+    }
+    console.log(randomColour());
+
+    const startBtn = document.querySelector('.start')
+    const stopBtn = document.querySelector('.stop')
+    let intervalValid = null;
+
+    const startChangingColor = function () {
+        document.body.style.backgroundColor = randomColour();
+    };
+
+    const stopChangingColor = function () {
+        clearInterval(intervalValid);
+        intervalValid = null;
+    };
+
+    startBtn.addEventListener('click', function () {
+        // document.querySelector('.bg').innerHTML = "";
+        if (!intervalValid) { // Prevent multiple intervals
+            intervalValid = setInterval(startChangingColor, 1000); // Start interval  
+        }
+    })
+
+    stopBtn.addEventListener('click', function () {
+        stopChangingColor();
+    })
 </script>
+
 </html>
