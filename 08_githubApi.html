@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github Api</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: #dadada;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            background-color: floralwhite;
+            height: 50vh;
+            width: 25vw;
+            border-radius: 5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .photo{
+            height: 150px;
+            width: 150px;
+            background-color: cadetblue;
+            border-radius: 5%;
+            margin-bottom: 3vh;
+        }
+        #github-photo{
+            height: 100%;
+            width: 100%;
+            border-radius: 5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            object-fit: cover;
+        }
+        h3{
+            text-shadow: 2px 2px 8px #4ea8f1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="photo">
+                <img id="github-photo" src="" alt="Github Photo">
+            </div>
+            <div class="followers">
+                <h3>Followers: <span id="followers-count"></span></h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const requesturl = 'https://api.github.com/users/surajkr97';
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requesturl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(xhr.responseText)
+            console.log(typeof data);
+            console.log(data.avatar_url);
+            document.getElementById('github-photo').src = data.avatar_url;
+            console.log(data.followers);
+            document.getElementById('followers-count').innerText = data.followers;
+        }
+    }
+    xhr.send();
+</script>
+</html>
