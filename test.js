@@ -166,3 +166,26 @@
 // })
 
 //------------------------------------------------------------
+
+//Promise
+
+const Promise4 = new Promise(function(resolve, reject){
+    setTimeout(() => {
+        let error = true;
+        if (!error) {
+            resolve({username: "suraj", email: "surajkumar06174@gmail.com"})
+        }
+        else{
+            reject('Error');
+        }
+        
+    }, 1000);
+})
+
+Promise4.then((e)=> {
+    console.log(e.username);
+    return e.username;
+})
+.catch((f)=>{
+    console.log('Error');
+})
